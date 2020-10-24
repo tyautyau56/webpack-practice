@@ -1,0 +1,12 @@
+{
+  "name": "webpack-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tyautyau56 <i19yanagi@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@webpack-cli/init": "^1.0.2",
+    "webpack": "^5.2.0",
+    "webpack-cli": "^4.1.0"
+  }
+}
