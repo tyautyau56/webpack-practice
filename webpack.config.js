@@ -32,27 +32,21 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/js/app.js',
+  entry: '/src/index.js',
   plugins: [new webpack.ProgressPlugin()],
 
   module: {
     rules: [{
       test: /\.(js|jsx)$/,
-      include: [path.resolve(__dirname, 'src/js')],
+      include: [path.resolve(__dirname, 'src')],
       loader: 'babel-loader'
     }, {
-      test: /.(scss|css)$/,
+      test: /.css$/,
 
       use: [{
         loader: "style-loader"
       }, {
         loader: "css-loader",
-
-        options: {
-          sourceMap: true
-        }
-      }, {
-        loader: "sass-loader",
 
         options: {
           sourceMap: true
@@ -75,7 +69,7 @@ module.exports = {
       chunks: 'async',
       minChunks: 1,
       minSize: 30000,
-      name: true
+      name: false
     }
   }
 }
